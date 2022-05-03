@@ -47,8 +47,7 @@ se tratava de uma camada de neurônios artificiais capazes de realizar a
 tarefa de aprendizagem ao adaptar seus pesos internos dependendo da
 entrada e da saída
 
-![Componentes de um perceptron clássico](classical.jpeg){#fig:classical
-width="9.5cm"}
+![Componentes de um perceptron clássico](https://github.com/jpspm/QuantumComputing/blob/main/ReadmeResources/classical.jpeg) _figura [1]_
 
 \
 desejada, com o objetivo de resolver um problema de classificação. Esse
@@ -60,7 +59,7 @@ de pesos), que são alterados de acordo com o treinamento e (3) uma
 função de ativação, que recebe a combinação linear do vetor de entrada e
 do vetor de pesos e classifica o resultado de acordo com um limiar
 (*threshold*) determinado. O perceptron clássico é ilustrado na Figura
-[1](#fig:classical){reference-type="ref" reference="fig:classical"}.
+[1]
 
 Perceptron Quântico
 -------------------
@@ -118,8 +117,7 @@ de pesos em vetores de estados quânticos formados pela combinação linear
 de _|0>_ e _|1>_. Para isso, é utilizado um circuito quântico.
 
 A configuração do circuito se dá utilizando, principalmente, portas
-Hadamard, portas _X_ e portas _P_ (ou *fase*), como mostrado na Figura
-[2](#fig:qcircuit){reference-type="ref" reference="fig:qcircuit"} (para
+Hadamard, portas _X_ e portas _P_ (ou *fase*), como mostrado na _figura [2]_ (para
 o caso específico de 2 qubits de entrada). Na figura, a parte destacada
 como _U<sub>i</sub>_ representa a parte responsável por introduzir os valores do
 vetor de entrada, e _U<sub>w</sub>_, os pesos dos neurônios quânticos utilizados
@@ -128,8 +126,8 @@ na única camada do perceptron.
 A introdução dos valores é feita principalmente pela porta _P_
 controlada, aplicada somente quando todos os qubits estão
 
-![Configuração do circuito quântico](qcircuit.png){#fig:qcircuit
-width="9cm"}
+![Configuração do circuito quântico](https://github.com/jpspm/QuantumComputing/blob/main/ReadmeResources/qcircuit.png) 
+_figura [2]_
 
 \
 em |1>. Assim, o circuito deve ser disposto de maneira a
@@ -145,7 +143,7 @@ aplicados à porta fase utilizada na inicialização.
 
 Por fim, após a inserção do vetor de entrada e do vetor de pesos no
 circuito, é feita a análise dos qubits resultantes a partir de uma porta
-$X$ multicontrolada (ou porta *toffoli*). Essa porta tem o intuito de
+_X_ multicontrolada (ou porta *toffoli*). Essa porta tem o intuito de
 \"transferir\" os valores dos qubits de input para um qubit auxiliar ou
 *Ancilla*, ao qual é aplicado um medidor para que possam ser analisadas
 as probabilidades de cada estado quântico. Assim, a partir da
@@ -170,9 +168,12 @@ necessários um vetor inicial de pesos e também uma função de perda (ou
 *loss*). Neste trabalho, foi utilizada uma instância de imagem de dígito
 1 disponível no MNIST dataset como vetor de pesos inicial. Já para a
 função de perda, foi utilizada a função
-$$\mathscr{L}(\phi)=\frac{1}{M}\sum_{i=1}^M(y_i-\Tilde{y_i})^2$$ que
-calcula a perda a cada batch de treinamento, onde $y_i$ é o resultado
-esperado para aquele input, $\Tilde{y_i}$ é a saída obtida e $M$ é o
+
+![Equação de perda](https://github.com/jpspm/QuantumComputing/blob/main/ReadmeResources/lossEquations.jpeg)
+
+\
+que calcula a perda a cada batch de treinamento, onde _y<sub>i</sub>_ é o resultado
+esperado para aquele input, _ỹ<sub>i</sub>_ é a saída obtida e _M_ é o
 tamanho do batch.
 
 Finalmente, dada a função de perda e o vetor de pesos inicial, foi
@@ -305,21 +306,28 @@ vistos aqui, junto dos ganhos em velocidade de execução e em uso de
 memória, é notório o potencial de crescimento desses algoritmos e da
 Computação Quântica no futuro.
 
-00 Mangini, S., Tacchino, F., Gerace, D., Macchiavello, C., and Bajoni,
+Referências
+===========
+
+- 00 Mangini, S., Tacchino, F., Gerace, D., Macchiavello, C., and Bajoni,
 D. (2020). Quantum computing model of an artificial neuron with
 continuously valued input data. Machine Learning: Science and
-Technology, 1(4), 045008. Oxford: Clarendon, 1892, pp.68--73. Tacchino,
-F., Macchiavello, C., Gerace, D. et al. An artificial neuron implemented
+Technology, 1(4), 045008. Oxford: Clarendon, 1892, pp.68--73. 
+
+- Tacchino, F., Macchiavello, C., Gerace, D. et al. An artificial neuron implemented
 on an actual quantum processor. npj Quantum Inf 5, 26 (2019).
-https://doi.org/10.1038/s41534-019-0140-4 Machine Learning Mastery.
-(2020). Perceptron Algorithm for Classification in Python \[Online\].
+https://doi.org/10.1038/s41534-019-0140-4 
+- Machine Learning Mastery. (2020). Perceptron Algorithm for Classification in Python \[Online\].
 Avaliable:
 https://machinelearningmastery.com/perceptron-algorithm-for-classification-in-python/
-TensorFlow. (2022). Treine sua primeira rede neural: classificação
+
+- TensorFlow. (2022). Treine sua primeira rede neural: classificação
 básica \[Online\]. Avaliable:
 https://www.tensorflow.org/tutorials/keras/classification?hl=pt-br
-Scikit Learn. (2011). "Visualization of MLP weights on MNIST"
+
+- Scikit Learn. (2011). "Visualization of MLP weights on MNIST"
 \[Online\]. Avaliable:
 https://scikit-learn.org/stable/auto\_examples/neural\_networks/plot\_mnist\_filters.html\#sphx-glr-auto-examples-neural-networks-plot-mnist-filters-py
-Qiskit(2022). \[Online\]. Avaliable: https://qiskit.org/
-Pennylane(2022).\[Online\].Avaliable: https://pennylane.ai/
+- Qiskit(2022). \[Online\]. Avaliable: https://qiskit.org/
+
+- Pennylane(2022).\[Online\].Avaliable: https://pennylane.ai/
