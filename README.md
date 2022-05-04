@@ -6,9 +6,6 @@ Diretório destinado ao projeto da disciplina IF775 - Top Avanç. em Algoritmos 
 - João Pedro Souza Pereira de Moura ([jpspm](mailto:jpspm@cin.ufpe.br))
 - Rafael Bernardo Nunes Neto ([rbnn](mailto:rbnn@cin.ufpe.br))
 
-perceptron, computação quântica, aprendizagem de máquina, redes neurais,
-neurônio artificial, classificação, MNIST, dígitos manuscritos
-
 Introdução
 ==========
 
